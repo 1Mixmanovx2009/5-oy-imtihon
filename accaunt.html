@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+        /* Modal styles */
+        #student-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        #student-modal .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+        }
+        #student-modal .modal-content input,
+        #student-modal .modal-content button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="admin-body bg-[#F2EAE1] overflow-hidden">
+
+
+    <div class="flex">
+        <div class="w-[20%] h-[100vh] bg-[#f2eae1]">
+            <div class="py-[34px] pl-[41px]">
+                <img class="mb-[54px]" src="./images/login-img.svg" alt="" width="171px">
+            </div>
+            <div class="mb-[64px]">
+                <div class="mb-[20px] flex justify-center items-center">
+<input type="file" id="file-input" style="display: none;" accept="image/*">
+
+                    <img class="avatar" src="./images/Avatar-Free-PNG-Image.png" alt="" width="128px" height="128px">
+                </div>
+                <div class="flex justify-center items-center mb-[10px]">
+                    <p class="name font-[700] text-[17px] leading-[20.72px]">Karthi Madesh</p>
+                </div>
+                <div class="flex justify-center items-center text-[#feaf00]">
+                    <p class="font-[500] text-[14px]">Admin</p>
+                </div>
+            </div> 
+            <div class="admin-btn-wrapper flex flex-column justify-center">
+                <button class="w-[192px] flex justify-center py-[12px] rounded-[4px] items-center text-[14px] font-[500] gap-[15px] mb-[150px] bg-[#feaf00]">
+                    <img src="./images/graduation-cap 1.svg" alt="" width="20" height="16">
+                    Students
+                </button>
+                <a class="clear flex" href="./index.html">
+                    <span class="text-[14px] font-[500]">Logout</span>
+                    <img class="ml-[24px]" src="./images/exsit.svg" alt="" width="17px" height="12px">
+                </a>
+            </div>
+        </div>
+        <div class="w-[80%]">
+            <div class="flex items-center justify-between py-[22.4px] px-[15px] bg-[#F2EAE1] text-end">
+                <img class="cursor-pointer" src="./images/Vector (11).svg" alt="">
+                                   
+                    <img class="cursor-pointer" src="./images/bell 1.svg" alt="">
+            </div>
+            <div class="block justify-center items-center bg-[#F8F8F8]">
+                    <p class="text-[22px] font-[700] leading-[26.82px]  pl-[29px]  pb-[20px] pt-[20px]">Karthi</p>
+                <div class="w-[951px] ml-[32px] bg-[#e5e5e5] h-[3px]"></div>
+            </div>
+            <ul class="flex items-center justify-between py-[21px] pb-[22px] pl-[170px] pr-[170px] bg-[#F8F8F8]">
+                <img src="" alt="">
+                <div>
+
+                </div>
+            </ul>
+            <ul class=" bg-[#F8F8F8] overflow-y-scroll h-[360px]" id="student-list">
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+
+       
+    </script>
+</body>
+</html>
